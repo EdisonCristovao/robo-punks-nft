@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css?family=Press+start+2P");
+@import url("https://fonts.googleapis.com/css?family=VT323");
+
+#root {
+  font-family: "Press Start 2P", "VT323";
+  color: white;
+  overflow: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.overlay {
+  text-align: center;
+  opacity: 0.85;
+  height: 100vh;
+  width: 100vw;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background-color: red;
+}
+
+.moving-background {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-image: url("./assets/background/parallax-bg.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 40% 40%;
+}
