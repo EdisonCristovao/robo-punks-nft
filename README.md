@@ -27,10 +27,6 @@
   <a href="#memo-license">License</a>
 </p>
 
-<p align="center">
-  <img alt="Scene" src="img/portfolio-scene---spiderman@2x.png">
-</p>
-
 ## :rocket: Technologies
 
 This project was created with the following technologies:
