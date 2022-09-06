@@ -1,5 +1,5 @@
 import { Box, Button, Flex, Input, Text } from "@chakra-ui/react";
-import { Contract, ethers } from "ethers";
+import { BigNumber, Contract, ethers } from "ethers";
 import React, { Dispatch, SetStateAction } from "react";
 import { useState } from "react";
 import RoboPunksNFT from "../RoboPunksNFT.json";
@@ -26,7 +26,9 @@ const Home = ({ accounts, setAccounts }: HomeProps) => {
       );
 
       try {
-        const response = await contract.mint(mintAmount);
+        const response = await contract.mint(BigNumber.from(mintAmount), {
+          value: ethers.utils.parseEther((0.02 * mintAmount).toString()),
+        });
         console.log("response", response);
       } catch (error) {
         console.error(error);
@@ -104,7 +106,7 @@ const Home = ({ accounts, setAccounts }: HomeProps) => {
             borderRadius={"5px"}
             boxShadow={"0px 2px 2px 1px #0F0F0F"}
             color={"white"}
-            onClick={handleIncrement}
+            onClick={handleMint}
             mt={4}
           >
             Mint Now
