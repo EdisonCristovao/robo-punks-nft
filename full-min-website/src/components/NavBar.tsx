@@ -14,27 +14,27 @@ const NavBar = ({ accounts, setAccounts }: NavBarProps) => {
   const isConnected = Boolean(accounts[0]);
 
   const connectAccount = async () => {
-    if (window.ethereum) {
-      const accounts = await window.ethereum.request({
-        method: "eth_requestAccounts",
-      });
-      setAccounts(accounts);
-    }
+    // if (window.ethereum) {
+    //   const accounts = await window.ethereum.request({
+    //     method: "eth_requestAccounts",
+    //   });
+    //   setAccounts(accounts);
+    // }
   };
 
   return (
     <Flex p={"30px"} align={"center"} justify={"space-between"}>
       <Flex justify={"space-around"} p={"0 75px"} width={"40%"}>
-        <Link href={""}>
-          <Image src-={TwitterIcon} boxSize={"42px"} />
+        <Link href={"#"}>
+          <Image src-={TwitterIcon} alt={""} />
         </Link>
 
-        <Link href={""}>
-          <Image src-={FacebookIcon} boxSize={"42px"} />
+        <Link href={"#"}>
+          <Image src-={FacebookIcon} alt={""} />
         </Link>
 
-        <Link href={""}>
-          <Image src-={EmailIcon} boxSize={"42px"} />
+        <Link href={"#"}>
+          <Image src-={EmailIcon} alt={""} />
         </Link>
       </Flex>
 

@@ -4,7 +4,7 @@ import NavBar from "./components/NavBar";
 import Home from "./components/Home";
 import "./index.css";
 
-export const App = () => {
+const App = () => {
   const [accounts, setAccounts] = useState([]);
 
   return (
@@ -15,3 +15,5 @@ export const App = () => {
     </Box>
   );
 };
+
+export default App;
